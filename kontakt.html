@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solid Ground - Stavebná firma</title>
+    <title>Solid Ground - Kontakt</title>
     <link rel="icon" type="image/png" href="Logo.png">
 </head>
 <style>
@@ -100,15 +100,10 @@
     }
 
     .hero {
-        background-image: url('https://www.eurolineslovakia.sk/img/projects/ObrRD_2004/Aktual_422/ak_422.jpg');
+        background-image: url('https://mvarchitektura.sk/wp-content/uploads/2024/02/rodinn%C3%BD-dom-STODOLA-04.jpg');
         background-size: cover;
         background-position: center;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
+        height: 420px;
         position: relative;
     }
 
@@ -119,75 +114,90 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.15);
         z-index: 1;
     }
 
     .hero h1 {
-        position: relative;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         z-index: 2;
         margin: 0;
         font-size: clamp(40px, 6vw, 80px);
         letter-spacing: 0.02em;
     }
 
-    .services {
-        padding: 32px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .Kontakt {
+        background-color: white;
+        margin: -120px auto 40px;
+        padding: 40px 32px;
+        max-width: 1100px;
+        border-radius: 60px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
+        position: relative;
+        z-index: 3;
+        min-height: 240px;
     }
 
-    .services h2 {
-        width: 100%;
-        margin-bottom: 16px;
+    .Kontakt h2 {
+        margin: 0 0 14px;
+        color: #008a2b;
+        font-size: clamp(48px, 6vw, 80px);
+        line-height: 1.05;
+        font-weight: 900;
     }
 
-    .services-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
+    .Kontakt p {
+        font-size: 19px;
+        line-height: 1.7;
+        color: #202020;
+        margin: 0;
     }
 
-    .services-buttons a {
-        text-decoration: none;
-        color: inherit;
+    h1 {
+        color: #0a7d2c;
+        font-size: 48px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
     }
 
-    .service {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 16px;
-        width: 280px;
-        margin: 16px;
-        padding: 16px;
-        background-color: rgb(230, 215, 0);
-        border: 2px solid rgb(227, 212, 0);
-        border-radius: 25px;
-        cursor: pointer;
-        font-size: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.5s ease;
-        transform-origin: center center;
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
     }
 
-    .service-icon {
+    .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
         width: 80px;
         height: 80px;
-        margin-bottom: 0;
-        flex-shrink: 0;
-        object-fit: cover;
+        background: #0a7d2c;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        margin-bottom: 20px;
     }
 
-    .service:hover {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        transform: scale(1.1);
-        background-color: white;
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        margin: 5px 0;
+        color: #333;
     }
 
     footer {
@@ -199,15 +209,14 @@
     }
 </style>
 
-
 <body>
-   <header>
+    <header>
         <div class="header-inner">
             <a href="index.html"><img class="logo" src="Logo.png" alt="Logo"></a>
             <nav>
                 <ul class="primary-nav">
                     <li><a href="index.html">Úvod</a></li>
-                    <li><a href="#services">Služby</a></li>
+                    <li><a href="index.html#services">Služby</a></li>
                     <li><a href="o_nas.html">O nás</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -215,44 +224,40 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero"></section>
+
+    <section class="Kontakt">
+        <h2>Kontakt</h2>
         <div>
-            <h1>Predávame.</h1>
-            <h1>Pomáhame.</h1>
-            <h1>Staviame.</h1>
-        </div>
+            <div class="cards">
+               
+                <div class="card">
+                    <div class="icon">🏠</div>
+                    <h3>Solid Ground</h3>
+                    <p>Nižná Korňa 530, 023 21 Korňa</p>
+                    <p>IČO: 32 786 457</p>
+                    <p>IČ DPH: SK2956821125</p>
+                </div>
+
+                
+                <div class="card">
+                    <div class="icon">🏗️</div>
+                    <h3>Stavba</h3>
+                    <p>+421 907 201 728</p>
+                    <p>stavba@solidgroundkorna.sk</p>
+                </div>
+
+                
+                <div class="card">
+                    <div class="icon">🛠️</div>
+                    <h3>Predajňa</h3>
+                    <p>+421 414 30 88 21</p>
+                    <p>obchod@solidgroundkorna.sk</p>
+                    <p>Otvorené: Po–Pi 7:00–16:30</p>
+                </div>
+            </div>
     </section>
-    <section class="services" id="services">
-        <h2>Naše služby</h2>
-        <div class="services-buttons">
 
-            <a href="stavebniny.html">
-                <button class="service">
-                    <img class="service-icon"
-                        src="https://images.vexels.com/media/users/3/144979/isolated/preview/735350f8c67f852bf7e03b0051dc74f8-hammer-silhouette.png"
-                        alt="Service Icon">
-                    <h3>Stavebniny</h3>
-                </button>
-            </a>
-
-            <a href="realizacia_stavieb.html">
-                <button class="service">
-                    <img class="service-icon" src="https://www.iconpacks.net/icons/1/free-wall-icon-1074-thumb.png"
-                        alt="Service Icon">
-                    <h3>Realizácia Stavieb</h3>
-                </button>
-            </a>
-
-            <a href="doprava.html">
-                <button class="service">
-                    <img class="service-icon" src="https://www.iconpacks.net/icons/1/free-truck-icon-1058-thumb.png"
-                        alt="Service Icon">
-                    <h3>Doprava</h3>
-                </button>
-            </a>
-
-        </div>
-    </section>
     <footer>
         <p>&copy; 2026 Solid Ground</p>
     </footer>
